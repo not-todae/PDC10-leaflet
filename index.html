@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <title>Leaflet</title>
+
+<style>
+    #map { height: 570px; }
+</style>
+
+</head>
+<body>
+
+    <h2>Map of the Top 10 places I want to visit.</h2>
+
+    <div id="map">
+        <script>
+            var map_center = [45.65021672983043, 63.30521666347385];
+        var mapOptions = {
+        center: map_center,
+        zoom: 2.3
+        }
+        var map = L.map('map', mapOptions);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 15,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+            var marker = L.circle([35.6883735, 139.7544070], {
+            color: 'red',
+            fillOpacity: 0.25,
+            radius: 300
+            }).addTo(map);
+            var popup = L.popup()
+            .setLatLng([139.7544070, 139.7544070])
+            .setContent("Chidoya, Japan")
+            .addTo(map);
+
+
+            var marker = L.circle([37.57094, 126.98149], {
+            color: 'red',
+            fillOpacity: 0.25,
+            radius: 300
+            }).addTo(map);
+            var popup = L.popup()
+            .setLatLng([37.57094, 126.98149])
+            .setContent("LOL Park, Seoul, South Korea")
+            .addTo(map);
+
+
+            var marker = L.circle([36.732646, 138.46198], {
+            color: 'red',
+            fillOpacity: 0.25,
+            radius: 200
+            }).addTo(map);
+            var popup = L.popup()
+            .setLatLng([36.732646, 138.46198])
+            .setContent("Jigokudani Monkey Park, Nagano Prefecture, Japan")
+            .addTo(map);
+
+            var marker = L.circle([59.3266, 18.1051], {
+            color: 'red',
+            fillOpacity: 0.25,
+            radius: 300
+            }).addTo(map);
+            var popup = L.popup()
+            .setLatLng([59.3266, 18.1051])
+            .setContent("Skansen, Stockholm, Sweden")
+            .addTo(map);
+
+            var marker = L.circle([-33.85613, 151.21543], {
+            color: 'red',
+            fillOpacity: 0.25,
+            radius: 1000
+            }).addTo(map);
+            var popup = L.popup()
+            .setLatLng([-33.85613, 151.21543])
+            .setContent("Sydney Opera House, Sydney, Australia")
+            .addTo(map);
+
+            var marker = L.circle([21.03615, 105.84034], {
+            color: 'red',
+            fillOpacity: 0.25,
+            radius: 300
+            }).addTo(map);
+            var popup = L.popup()
+            .setLatLng([21.03615, 105.84034])
+            .setContent("Imperial Citadel of Thang Long, Vietnam")
+            .addTo(map);
+
+            var marker = L.circle([41.89028, 12.4929], {
+            color: 'red',
+            fillOpacity: 0.25,
+            radius: 300
+            }).addTo(map);
+            var popup = L.popup()
+            .setLatLng([41.89028, 12.4929])
+            .setContent("Colosseum, Italy")
+            .addTo(map);
+
+            var marker = L.circle([52.37282, 4.89369], {
+            color: 'red',
+            fillOpacity: 0.25,
+            radius: 1000
+            }).addTo(map);
+            var popup = L.popup()
+            .setLatLng([52.37282, 4.89369])
+            .setContent("Amsterdam, Neatherlands")
+            .addTo(map);
+
+            var marker = L.circle([1.30855,103.81810], {
+            color: 'red',
+            fillOpacity: 0.25,
+            radius: 300
+            }).addTo(map);
+            var popup = L.popup()
+            .setLatLng([1.30855,103.81810])
+            .setContent("Singapore Botanic Gardens, Singapore")
+            .addTo(map);
+
+            var marker = L.circle([36.09658, -112.09849], {
+            color: 'red',
+            fillOpacity: 0.25,
+            radius: 300
+            }).addTo(map);
+            var popup = L.popup()
+            .setLatLng([36.09658, -112.09849])
+            .setContent("Grand Canyon, Arizona")
+            .addTo(map);
+
+            var latlngs = [
+    [[24.17107906318813, 118.38603344947724],
+     [6.740669010590165, 117.60492537168065],
+     [24.17107906318813, 118.38603344947724],
+     [13.654960430101546, 126.78199579704365],
+     [6.740669010590165, 117.60492537168065]],
+];
+
+var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+
+
+
+        </script>
+    </div>
+
+</body>
+</html>
